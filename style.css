@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: cursive, Helvetica, sans-serif;
+    color: aliceblue;
+    font-weight: bold;
+    text-align: center;
+}
+
+body {
+     animation: slider 20s infinite;
+     background-size: 100% ;
+     
+}
+h3{
+  animation: colorChange 6s infinite
+}
+
+.container {
+      display: grid;
+      grid-template-columns: 1fr;
+      background-color: transparent;
+      
+      
+}
+.box{
+     margin: 20px;
+     padding: 10px;
+     border-radius: 30px;
+      margin: 10px;
+      box-shadow: 20px 20px 40px black;
+      
+  
+}
+@keyframes slider{
+  0%{
+    background-image: url(1.gif);
+  }
+  10% {
+    background-image: url(2.gif);
+  }
+  30%{
+    background-image: url(3.gif);
+  }
+  50% {
+    background-image: url(4.gif);
+  }
+  70% {
+    background-image: url(5.gif);
+  }
+  100% {
+    background-image: url(6.gif);
+  }
+}
+.text{
+  font-size: 1.5em;
+  position: center;
+  text-align: center;
+  animation: colorChange 6s infinite;
+}
+
+p{
+  font-size: 1.28em;
+  animation: colorChange 12s infinite linear;
+  text-align: justify
+}
+
+.box{
+    animation: anima_scroll linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%;
+}
+img{
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+  border-radius: 30px;
+  box-shadow: 2px 2px 30px;
+}
+@keyframes colorChange{
+  0% {
+    color: lightgray;
+  }
+  25% {
+    color: black;
+  }
+  50% {
+    color: white;
+  }
+  75% {
+    color: skyblue;
+  }
+  100% {
+    color: transparent;
+  }
+}
+
+@keyframes anima_scroll {
+    0%{
+        opacity: 0;
+        transform: translate(-150px);
+}
+    100%{
+        opacity: 1;
+        transform: translate(0px);
+}
+}
+video {
+    height: 300px;
+    width: 300px;
+    box-shadow: -10px 10px 20px;
+}
+
+
+@keyframes animaMarcador{
+  50%{
+    border-right: transparent;
+  }
+}
+@keyframes animaTexto{
+  0% {
+    width: 0;
+  }
+}
